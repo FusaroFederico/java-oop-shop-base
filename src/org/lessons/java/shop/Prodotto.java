@@ -32,4 +32,8 @@ public class Prodotto {
 	public float priceIncludingVat() {
 		return itemPrice + (itemPrice * itemIva / 100);
 	}
+	// getFullName method
+	public String getFullName() {
+		return itemCode + "-" + itemName;
+	}
 }
