@@ -28,5 +28,8 @@ public class Prodotto {
 	public float getItemPrice(){
 		return itemPrice;
 	}
-	
+	// get priceIncludingVat
+	public float priceIncludingVat() {
+		return itemPrice + (itemPrice * itemIva / 100);
+	}
 }
