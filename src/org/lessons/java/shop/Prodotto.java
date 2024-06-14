@@ -24,5 +24,9 @@ public class Prodotto {
 		itemPrice = price;
 		itemIva = iva;
 	}
+	// get itemPrice method
+	public float getItemPrice(){
+		return itemPrice;
+	}
 	
 }
