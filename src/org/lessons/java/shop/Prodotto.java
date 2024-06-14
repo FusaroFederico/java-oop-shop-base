@@ -8,11 +8,11 @@ public class Prodotto {
 	int itemCode;
 	String itemName;
 	String itemDescription;
-	float itemPrice;
+	double itemPrice;
 	int itemIva;
 	
 	// constructor method
-	public Prodotto(String name, String description, float price, int iva) {
+	public Prodotto(String name, String description, double price, int iva) {
 		// new instance for random number
 		Random random = new Random();
 		// six-digit random number
@@ -25,12 +25,12 @@ public class Prodotto {
 		itemIva = iva;
 	}
 	// get itemPrice method
-	public float getItemPrice(){
+	public double getItemPrice(){
 		return itemPrice;
 	}
 	// get priceIncludingVat
-	public float priceIncludingVat() {
-		return itemPrice + (itemPrice * itemIva / 100);
+	public double priceIncludingVat() {
+		return Math.round((itemPrice + (itemPrice * itemIva / 100)) * 100.0) / 100.0;
 	}
 	// getFullName method
 	public String getFullName() {
